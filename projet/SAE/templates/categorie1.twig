@@ -1,0 +1,32 @@
+{% extends "base.twig" %}
+
+{% block main %}
+<h2>{{ nom }}</h2>
+<div class="boiss">
+    {% for boisson in boissons %}
+    <article id="{{ boisson.id }}">
+        <section>
+            <img src={{ boisson.image }} alt={{ boisson.alt }}>
+        </section>
+        <section>
+            <h3 class="red">{{ boisson.Nom }}</h3>
+            <p>{{ boisson.Gout }}</p>
+            <h4 class="red">{{ boisson.titre1 }}</h4>
+            <ul>
+                <li>{{ boisson.taille_disponible.taille1 }}</li>
+                <li>{{ boisson.taille_disponible.taille2 }}</li>
+                <li>{{ boisson.taille_disponible.taille3 }}</li>
+            </ul>
+            <h4 class="red">{{boisson.titre2}}</h4>
+            <ul>
+                {% for key, value in boisson.Composition %}
+                <li>{{ key }} : {{ value }}.</li>
+                {% endfor %}
+            </ul>
+            <p><span>{{ boisson.mot }}</span> : <span class="red">{{ boisson.prix }}</span></p>
+            <p>{{ boisson.date }}</p>
+        </section>
+    </article>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,50 @@
+main .propos p{
+    margin: 30px 0px;
+}
+
+main .cgu {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+main .cgu p {
+    margin: 0px 100px;
+}
+
+main p {
+    background-color: #F2F2F2;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+/*Bouton*/
+
+main summary {
+    margin: 30px 100px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #002D72;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.1s;
+}
+
+/*Animation*/
+
+main p:hover {
+    box-shadow: 0 0 20px #E10600;
+}
+
+main p:hover .red {
+    color: #E10600;
+}
+
+main summary:hover {
+    color: #FFD700;
+    transform: scale(1.02);
+    cursor: pointer;
+}

@@ -1,0 +1,73 @@
+main img {
+    width: 200px;
+}
+
+main article {
+    background-color: white;
+    gap: 30px;
+}
+
+main section {
+    background-color: #F2F2F2;
+    padding: 50px;
+    border-radius: 30px;
+    width: 600px;
+    height: 400px;
+}
+
+main figure {
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   gap: 20px;
+   padding: 50px 150px;
+   border-radius: 30px;
+   color: white;
+}
+
+main #f1 figure {
+    background-image: linear-gradient(rgba(0, 45, 114, 0.8)), url('../images/max.jpg' );
+}                                                                                           
+
+main #moto figure {
+    background-image: linear-gradient(rgba(0, 45, 114, 0.8)), url('../images/motopilote.jpg');
+}
+
+main #foot figure {
+    background-image:linear-gradient(rgba(0, 45, 114, 0.8)), url('../images/footjoue.jpg');
+}
+
+main #t1 figure {
+    background-image:linear-gradient(rgba(0, 45, 114, 0.8)), url('../images/T1joue.jpg');
+}
+
+main #hockey figure {
+    background-image:linear-gradient(rgba(0, 45, 114, 0.8)), url('../images/hockeyjoue.jpg');
+}
+
+main article:nth-child(odd) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+main article:nth-child(even) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+
+main li:nth-child(n+2) {
+    list-style: square;
+    list-style: inside;
+}
+
+main div {
+    gap: 50px;
+    margin: 50px 0;
+}
+
+main section h3, p {
+    text-align: center;
+}
