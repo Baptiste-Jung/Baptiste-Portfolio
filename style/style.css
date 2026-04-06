@@ -122,7 +122,7 @@ main .projet article:hover {
 }
 
 main section article:nth-child(1) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4)), url("../img/f1.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4)), url("../img/F1.png");
     background-size: 100%, 30%;
     background-position: 3% center;
     background-repeat: no-repeat;
