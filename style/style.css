@@ -122,21 +122,21 @@ main .projet article:hover {
 }
 
 main section article:nth-child(1) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4)), url('/img/f1.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4)), url("../img/f1.png");
     background-size: 100%, 30%;
     background-position: 3% center;
     background-repeat: no-repeat;
 }
 
 main section article:nth-child(3) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4)), url('/img/canette.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4)), url("../img/canette.png");
     background-size: 100%, 8%;
     background-position: 13% center;
     background-repeat: no-repeat;
 }
 
 main section article:nth-child(5) {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4)), url('/img/portfolio.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4)), url("../img/portfolio.png");
     background-size: 100%, 12%;
     background-position: 13% center;
     background-repeat: no-repeat;
@@ -347,7 +347,7 @@ footer li i {
 /* Responsive */
 @media screen and (min-width: 1024px) {
     main .bannere {
-        background-image: url('/img/ban.jpg');
+        background-image: url("../img/ban.jpg");
         height: 100vh;
     }
 
