@@ -64,7 +64,7 @@ header section {
 /*MAIN*/
 
 main .bannere {
-    background-image: url('/img/ban-tel.jpg');
+    background-image: url("../img/ban-tel.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
