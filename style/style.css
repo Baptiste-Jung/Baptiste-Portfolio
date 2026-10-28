@@ -64,9 +64,10 @@ header section {
 /*MAIN*/
 main h1 {
     text-align: center;
-    color: #9B111E;
+    color: white;
     background-color:  rgba(0, 0, 0, 0.7);
-    padding: 10px;
+    padding: 20px 10px;
+    margin: 0 50px;
     border-radius: 20px;
 }
 
