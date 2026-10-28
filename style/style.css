@@ -62,6 +62,15 @@ header section {
 }
 
 /*MAIN*/
+main h1 {
+    text-align: center;
+    color: #9B111E;
+    background-color:  rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+
 
 main .bannere {
     background-image: url("../img/ban-tel.jpg");
