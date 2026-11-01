@@ -1,0 +1,102 @@
+{% extends "base.twig" %}
+
+{% block css %}
+<link rel="stylesheet" href="css/categorie3.css">
+{% endblock css %}
+
+{% block main %}
+<h2>{{ nom }}</h2>
+<div class="gauche">
+    <aside>
+        <section>
+            <h3>{{ titre1 }}</h3>
+            {% for boisson in boissons %}
+            <div class="content-gauche">
+                <h4>{{ boisson.Nom }}</h4>
+                <a href={{ boisson.source }} target="_blank">{{ info1 }}</a>
+            </div>
+            {% endfor %}
+        </section>
+        <section>
+            <h3>{{ titre2 }}</h3>
+            {% for sponsort in sponsoring %}
+            <div class="content-gauche">
+                <h4>{{ sponsort.Nom }}</h4>
+                <a href={{ sponsort.source }} target="_blank">{{ info2 }}</a>
+            </div>
+            {% endfor %}
+        </section>
+        <section>
+            <h3>{{ titre3 }}</h3>
+            {% for evenement in events %}
+            <div class="content-gauche">
+                <h4>{{ evenement.type }}</h4>
+                <a href={{ evenement.source }} target="_blank">{{ info3 }}</a>
+            </div>
+            {% endfor %}
+        </section>
+        <section>
+            <h3>{{ titre4 }}</h3>
+            {% for sociaux in reseau %}
+            <div class="content-gauche">
+                <a href={{ sociaux.source }} target="_blank"><img src={{ sociaux.images }} alt="logo du reseau"></a> 
+            </div>
+            {% endfor %}
+        </section>
+    </aside>
+    <div class="droite">
+        {% for evenement in events %}
+        <article id="{{ evenement.id }}">
+            <img src={{ evenement.image }} alt={{ alt }}>
+            <div class="contenu">
+                <section>
+                    <h3 class="red">{{ evenement.type }}</h3>
+                </section>
+                <ul class="texte">
+                    <li>{{ evenement.créée }}.</li>
+                    <li>{{ evenement.date }}.</li>
+                    <li>{{ evenement.lieu }}.</li>
+                </ul>
+                <div class="list">
+                    <section class="top">
+                        <h4 class="red">{{ evenement.titre1 }}</h4>
+                        <ul>
+                            {% for key, value in evenement.participant %}
+                            <li>{{ key }} : {{ value }}.</li>
+                            {% endfor %}
+                        </ul>
+                    </section>
+                    <section class="top">
+                        <h4 class="red">{{ evenement.titre2 }}</h4>
+                        <ul>
+                            {% for key, value in evenement.spectateur %}
+                            <li>{{ key }} : {{ value }}.</li>
+                            {% endfor %}
+                        </ul>
+                    </section>
+                </div>
+                <div class="list">
+                    <section class="top">
+                        <h4 class="red">{{ evenement.titre3 }}</h4>
+                        <ul>
+                            {% for key, value in evenement.top_femme %}
+                            <li>{{ key }} : {{ value }}.</li>
+                            {% endfor %}
+                        </ul>
+                    </section>
+                    <section class="top">
+                        <h4 class="red">{{ evenement.titre4 }}</h4>
+                        <ul>
+                            {% for key, value in evenement.top_homme %}
+                            <li>{{ key }} : {{ value }}.</li>
+                            {% endfor %}
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </article>
+
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

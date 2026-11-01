@@ -1,0 +1,79 @@
+{% extends "base.twig" %}
+
+{% block main %}
+
+<article class="pag_avis">
+    <h2 class="invi">temp</h2>
+
+    <section class="avis">
+        <h2>Donnez votre avis.</h2>
+
+        <form method="post" action="avis.php">
+            <div>
+                <label for="pseudo">Pseudo :</label>
+                <input type="text" id="pseudo" name="pseudo" placeholder="Votre Pseudo" required>
+            </div>
+
+            <div>
+                <label for="sentiers">Sentiers : </label>
+                <select name="sentiers" id="sentiers">
+                    {% for rando in tableau_sentiers %}
+                    <option value="{{ rando.id_sentier }}">{{ rando.nom }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div>
+                <label for="note">Note : </label>
+                <select name="note" id="note">
+                    <option value="">-- Note --</option>
+                    <option value="5">★★★★★</option>
+                    <option value="4">★★★★</option>
+                    <option value="3">★★★</option>
+                    <option value="2">★★</option>
+                    <option value="1">★</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="message">Message : </label>
+                <textarea name="message" id="message" placeholder="Votre message"></textarea>
+            </div>
+
+
+            <div>
+                <button type="submit">Envoyer</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="liste_avis">
+        <h2 class="invi">temp</h2>
+
+        <h2>Liste des avis.</h2>
+
+        <div class="stat_avis">
+            <p>Nombre d'avis : {{ stats.nombre_avis }}</p>
+            <p>Note moyenne : {{ stats.moyenne_note }}/5</p>
+        </div>
+
+        <div class="liste-avis">
+            {% for avis in tableau_avis %}
+            <section class="one_avis">
+                <div>
+                    <h3 class="avis_pseudo">{{ avis.pseudo|raw}}</h3>
+                    <h4>{{ avis.nom|raw}}</h4>
+                    <h5>{% for i in 1..avis.note %}★
+                        {% endfor %}
+                        {% if avis.note < 5 %} {% for i in avis.note+1..5 %}☆ {% endfor %} {% endif %}</h5>
+                </div>
+                <p>{{avis.message|raw}}</p>
+                <p class="date">{{avis.DatePublication}}</p>
+            </section>
+            <a href="delete.php?id={{ avis.id_avis }}" aria-label="Supprimer l'avis de {{ avis.pseudo }}">Supprimer</a>
+            {% endfor %}
+        </div>
+    </section>
+</article>
+
+{% endblock %}

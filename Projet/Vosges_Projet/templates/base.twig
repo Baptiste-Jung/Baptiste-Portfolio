@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/temp_SAE_V1/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Vosges Horizon | {{ nom }}</title>
+</head>
+
+<body>
+    <header>
+        <article class="contain-header">
+            <h2 class="invi">temp</h2>
+            <a href="/temp_SAE_V1/index.php" aria-label="aller vers la page d'accueil">
+                <img src="/temp_SAE_V1/images/logo.png" alt="logo du site">
+            </a>
+            <div class="recherche">
+                <i class="bi bi-search"></i>
+                <label for="recherche"></label>
+                <input type="text" id="recherche" name="recherche" placeholder="Rechercher...">
+            </div>
+
+
+            <input type="checkbox" id="menu-burger">
+            <label for="menu-burger" class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav class="menu">
+                <ul>
+                    <li><a href="/temp_SAE_V1/rando.php" aria-label="Aller vers la page randonnée">Randonnées</a></li>
+                    <li><a href="/temp_SAE_V1/trek.php" aria-label="Aller vers la page trek">Treks</a></li>
+                    <li><a href="/temp_SAE_V1/avis.php" aria-label="Aller vers la page avis">Avis</a></li>
+                </ul>
+            </nav>
+
+        </article>
+    </header>
+    <main>
+
+        <h1>{{nom}}</h1>
+
+        <div class="container">
+            {% block main %}
+
+            <section class="titre">
+                <img src="images/icons/randonnee.png" alt="icon de randonnée en bleu">
+                <h2>Randonnées</h2>
+            </section>
+
+            <article class="liste_accueil">
+                <h2 class="invi">temp</h2>
+                {% for rando in tableau_sentiers %}
+                <a href="detail.php?id={{rando.id_sentier}}" aria-label="Voir les détails du sentier {{ rando.nom }}">
+                    <section class="accueil-article">
+                        <h2 class="invi">temp</h2>
+                        <img src="{{rando.image}}" alt="image de l'itinéraire du sentier {{ rando.nom }}">
+                        <div class="texte-accueil">
+                            <h3>{{ rando.nom }}</h3>
+                            <div class="stat">
+                                <div class="km">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    <p>{{ rando.km }} km</p>
+                                </div>
+                                <div class="denivle">
+                                    <i class="bi bi-graph-up-arrow"></i>
+                                    <p>{{ rando.denivele }} m</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </a>
+                {% endfor %}
+                <a href="rando.php" class="liste" aria-label="Allez vers la page qui affiche toutes les randonnées">
+                    Voir toutes les randonnées</a>
+            </article>
+
+            <div class="titre">
+                <img src="images/icons/trek.png" alt="icon de trek en bleu">
+                <h2>Treks</h2>
+            </div>
+
+            <article class="liste_accueil">
+                <h2 class="invi">temp</h2>
+                {% for trek in tableau_trek %}
+                <a href="detail.php?id={{trek.id_sentier}}" aria-label="Voir les détails du sentier {{ trek.nom }}">
+                    <section class="accueil-article">
+                        <h2 class="invi">temp</h2>
+                        <img src="{{trek.image}}" alt="image de l'itinéraire du sentier {{ rando.nom }}">
+                        <div class="texte-accueil">
+                            <h3>{{ trek.nom }}</h3>
+                            <div class="stat">
+                                <div class="km">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    <p>{{ trek.km }} km</p>
+                                </div>
+                                <div class="denivle">
+                                    <i class="bi bi-graph-up-arrow"></i>
+                                    <p>{{ trek.denivele }} m</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </a>
+                {% endfor %}
+                <a href="trek.php" class="liste" aria-label="Aller vers la page qui affiche tout les treks"> Voir touts
+                    les treks</a>
+            </article>
+
+            {% endblock %}
+        </div>
+    </main>
+    <footer>
+        <div class="container">  
+            <ul>
+                <li><a href="/temp_SAE_V1/index.php" aria-label="aller vers la page d'accueil">Accueil</a></li>
+                <li><a href="/temp_SAE_V1/rando.php" aria-label="aller vers la page des randonnées">Randonnées</a></li>
+                <li><a href="/temp_SAE_V1/trek.php" aria-label="aller vers la page des treks">Treks</a></li>
+                <li><a href="/temp_SAE_V1/avis.php" aria-label="aller vers la page d'avis">Avis</a></li>
+            </ul>
+            <article>
+                <h3>baptiste.jung.2007@gmail.com</h3>
+                <div class="rs">
+                    <a href="https://www.instagram.com/" target="_blank" aria-label="aller vers le site de instagram"><i
+                            class="bi bi-instagram"></i></a>
+                    <a href="https://www.tiktok.com/" target="_blank" aria-label="aller vers le site de tiktok"><i
+                            class="bi bi-tiktok"></i></a>
+                    <a href="https://www.youtube.com/" target="_blank" aria-label="aller vers le site youtube"><i
+                            class="bi bi-youtube"></i></a>
+                </div>
+            </article>
+            <p class="copy">Copyright - Baptiste Jung 2026</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,383 @@
+/* GENERAL */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* HEADER */
+
+header {
+    width: 1240px;
+    background-color: rgb(51, 51, 51, 0.7);
+    margin: 0 auto;
+    text-align: center;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+
+}
+
+header h1 {
+    font-size: 50px;
+}
+
+header .titre img {
+    width: 200px;
+}
+
+header .titre h1 {
+    padding: 100px 0px;
+}
+
+header .titre {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 500px;
+}
+
+header .menu {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 250px;
+    padding-bottom: 50px;
+    padding-right: 80px;
+    font-size: 15px;
+}
+
+header .menu ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+}
+
+header ul li:nth-child(1) a {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 60px;
+    padding: 20px;
+}
+
+header a {
+    display: flex;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 60px;
+    padding: 20px;
+    transition: all 0.1s;
+}
+
+/*animation*/
+
+header a:hover {
+    transform: scale(1.2);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-decoration: underline;
+}
+
+/* MAIN */
+
+main {
+    width: 1080px;
+    margin: 0 auto;
+    background-color: rgb(192, 192, 192);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+    padding-bottom: 75px;
+    padding-top: 75px;
+}
+
+main .info {
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/*Texte et images*/
+
+main .debut img {
+    width: 450px;
+    border-radius: 30px;
+    transition: all 0.1s;
+}
+
+main p {
+    text-align: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main .texte1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 500px;
+    gap: 30px;
+}
+
+main .aide {
+    color: gray;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+main .histoire {
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    gap: 40px;
+    align-items: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 60px;
+    margin: 10px;
+    transition: all 0.1s;
+}
+
+main .texte2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 500px;
+    gap: 30px;
+}
+
+main .actuelle {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 50px;
+    gap: 40px;
+    align-items: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 60px;
+    margin: 10px;
+    transition: all 0.1s;
+}
+
+/*classement voiture*/
+
+
+/*Top 3*/
+main .ecuries {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 60px;
+    transition: all 0.1s;
+}
+
+main .mclaren {
+    background-color: #FF8000;
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 20px;
+    border-radius: 30px;
+    transition: all 0.1s;
+}
+
+main .mercedes {
+    background-color: #00A19B;
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 20px;
+    border-radius: 30px;
+    transition: all 0.1s;
+}
+
+main .redbull {
+    background-color: #0600EF;
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 20px;
+    border-radius: 30px;
+    transition: all 0.1s;
+}
+
+
+main .top3 .voiture {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+main .top3 .logo {
+    width: 50px;
+}
+
+main .textelogo {
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    gap: 30px;
+}
+
+
+main .top3 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+main .nom {
+    font-style: italic;
+}
+
+
+/*La liste qui donne la fin du classement*/
+
+main .fintop .liste li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 25px;
+}
+
+main .fintop img {
+    width: 30px;
+}
+
+/*animation*/
+
+main .histoire:hover {
+    transform: scale(1.02);
+}
+
+main .actuelle:hover {
+    transform: scale(1.02);
+}
+
+main .histoire img:hover {
+    transform: scale(2);
+}
+
+main .actuelle img:hover {
+    transform: scale(2);
+}
+
+main .ecuries:hover {
+    transform: scale(1.02);
+}
+
+main .mercedes:hover {
+    transform: scale(1.3);
+}
+
+main .mclaren:hover {
+    transform: scale(1.3);
+}
+
+main .redbull:hover {
+    transform: scale(1.3);
+}
+
+/* FOOTER */
+
+footer {
+    width: 1240px;
+    background-color: rgb(51, 51, 51, 0.7);
+    margin: 0 auto;
+    text-align: center;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+}
+
+footer a {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 60px;
+    padding: 20px;
+    margin-bottom: 10px;
+
+}
+
+footer .foot {
+    display: flex;
+    padding-top: 20px;
+    justify-content: center;
+    gap: 100px;
+}
+
+footer .foot h3 {
+    padding-bottom: 20px;
+}
+
+footer .copyright {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+footer .reseau img {
+    width: 30px;
+}
+
+footer .reseau a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 3px;
+}
+
+
+footer .langues img {
+    width: 30px;
+}
+
+footer .langues a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 7px;
+    padding-bottom: 9px;
+}
+
+footer .pages li :first-child {
+    display: flex;
+    align-content: center;
+    padding-top: 9px;
+}
+
+footer .pages li :last-child {
+    padding-bottom: 7px;
+}
+
+/*animation*/
+footer a:hover {
+    transform: scale(1.2);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+}

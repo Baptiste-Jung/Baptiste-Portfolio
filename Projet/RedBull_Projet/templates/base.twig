@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    {% block css %}
+    {% endblock css %}
+    <title>{{ titre }}</title>
+</head>
+
+<body>
+    <header>
+        <section>
+            <div class="headerimg">
+                <a href="index.php?lang={{ lang }}"><img src="images/Red-Bull-Logo.png" alt="logo de red bull" class="logo"></a>
+                <div class="drapeau">
+                    <a href="?lang=en"><img src="images/en.png" alt="drapeau anglais" class="en"></a>
+                    <a href="?lang=fr"><img src="images/fr.png" alt="drapeau francais" class="en"></a>
+                </div>
+            </div>
+            <nav>
+                {% for element in page %}
+                <a href={{ element.nom }}>{{ element.titre }}</a>
+                {% endfor %}
+                {% for nav in menu %}
+                <div class="sousMenu">
+                    <a href={{ nav.nom }}>{{ nav.titre }}</a>
+                    <ul>
+                        {% for key, value in nav.article %}
+                        <li><a href={{ value }}>{{key}}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+            </nav>
+        </section>
+    </header>
+    <main>
+        {% block main %}
+        <img src={{ image }} alt="image red bull avec slogan" class="ban">
+        <div class="acceuil">
+            <h2>{{ nom }}</h2>
+            <p>{{ texte }}</p>
+        </div>
+        <div class="acceuil-contenu">
+            <h2>{{titre2}}</h2>
+            <div class="contenu-site">
+                {% for element in acceuil %}
+                <a href={{ element.lien }}>
+                    <section>
+                        <img src={{ element.img }} alt={{ element.alt }}>
+                        <div class="texte-contenu">
+                            <h2>{{ element.titre }}</h2>
+                            <p>{{ element.sousTitre }}</p>
+                        </div>
+                    </section>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+        {% endblock %}
+    </main>
+    <footer>
+        <ul>
+            {% for element in page %}
+            <li><a href={{ element.nom }}>{{ element.titre }}</a></li>
+            {% endfor %}
+            {% for nav in menu %}
+            <a href={{ nav.nom }}>{{ nav.titre }}</a>
+            {% endfor %}
+        </ul>
+        <p>Jung Baptiste - Copyright 2026</p>
+    </footer>
+</body>
+
+</html>

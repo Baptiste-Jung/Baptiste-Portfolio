@@ -1,0 +1,40 @@
+{% extends "base.twig" %}
+
+{% block main %}
+<h2>{{ nom }}</h2>
+<form method="post">
+    <fieldset>
+        <label for="name">{{ NomUser }}</label>
+        <input type="text" id="nom" name="user_nom">
+    </fieldset>
+
+    <fieldset>
+        <label for="name">{{ PrenomUser }}</label>
+        <input type="text" id="prenom" name="user_prenom">
+    </fieldset>
+
+    <fieldset>
+        <label for="email">{{ mailUser }}</label>
+        <input type="email" id="mail" name="user_mail">
+    </fieldset>
+
+    <fieldset>
+        <label for="option">{{ Selection }}</label>
+        <select id="option">
+            <option>{{ choix }}</option>
+            <option name="boissons">{{ choix1 }}</option>
+            <option name="sponso">{{ choix2 }}</option>
+            <option name="event">{{ choix3 }}</option>
+            <option name="other">{{ choix4 }}</option>
+        </select>
+    </fieldset>
+
+    <fieldset>
+        <label for="msg">{{ message }}</label>
+        <textarea id="msg" name="user_message"></textarea>
+    </fieldset>
+
+    <button type="envoyer">{{ send }}</button>
+
+</form>
+{% endblock %}

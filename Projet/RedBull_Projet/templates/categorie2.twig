@@ -1,0 +1,45 @@
+{% extends "base.twig" %}
+
+{% block css %}
+<link rel="stylesheet" href="css/categorie2.css">
+{% endblock css %}
+
+{% block main %}
+<h2>{{ nom }}</h2>
+{% for sponsort in sponsoring %}
+<article id="{{ sponsort.id }}">
+    <figure>
+        <img src={{ sponsort.image }} alt={{ sponsort.alt }}>
+        <figcaption>{{ sponsort.alt }}</figcaption>
+    </figure>
+    <section>
+        <h3 class="red">{{ sponsort.Nom }}</h3>
+        <p>{{ sponsort.sponsorise }}</p>
+        <p>{{ sponsort.apparition }}</p>
+        <div class="boiss">
+            <ul>
+                <li>
+                    <h4 class="red">{{ sponsort.titre1 }}</h4>
+                </li>
+                {% for value in sponsort.sportif %}
+                <li>{{ value }}</li>
+                {% endfor %}
+            </ul>
+            <ul>
+                <li>
+                    <h4 class="red">{{ sponsort.titre2 }}</h4>
+                </li>
+                {% for value in sponsort.autre %}
+                <li>{{ value }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% if sponsort.titre is empty %}
+        <p>{{ sponsort.PasTitre }}</p>
+        {% else %}
+        <p>{{ sponsort.titre }}</p>
+        {% endif %}
+    </section>
+</article>
+{% endfor %}
+{% endblock %}

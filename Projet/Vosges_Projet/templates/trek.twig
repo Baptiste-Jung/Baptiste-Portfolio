@@ -1,0 +1,35 @@
+{% extends "base.twig" %}
+
+{% block main %}
+
+<article class="liste_categorie">
+    <h2 class="invi">temp</h2>
+    {% for rando in tableau_rando %}
+    <a href="detail.php?id={{rando.id_sentier}}" aria-label="Voir les détails du sentier {{ rando.nom }}">
+        <section class="accueil-rando">
+            <h2 class="invi">temp</h2>
+            <div class="titre_stat">
+                <img src="{{rando.image}}" alt="image de l'itinéraire du sentier {{rando.nom}}">
+                <section>
+                    <h2 class="rando_nom">{{ rando.nom }}</h2>
+                    <div class="texte-accueil">
+                        <div class="stat">
+                            <div class="km">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <p>{{ rando.km }} km</p>
+                            </div>
+                            <div class="denivle">
+                                <i class="bi bi-graph-up-arrow"></i>
+                                <p>{{ rando.denivele }} m</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <p>{{rando.PointVU}}</p>
+        </section>
+    </a>
+    {% endfor %}
+</article>
+
+{% endblock %}

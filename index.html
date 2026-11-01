@@ -4,153 +4,361 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/images/logoBJ.png">
+    <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link href="style/style.css" rel="stylesheet">
-    <title>Portfolio | Acceuil</title>
+    <title>Portfolio | Accueil</title>
 </head>
 
 <body>
-    <header>
-        <h1>Baptiste <span>Jung</span></h1>
-        <section>
-            <a href="https://www.linkedin.com/in/baptiste-jung/" target="_blank"><i class="bi bi-linkedin"></i></a>
-            <a href="https://github.com/Baptiste-Jung" target="_blank"><i class="bi bi-github"></i></a>
-        </section>
-    </header>
-    <main>
-        <div class="bannere">
-        </div>
-        <h1>Refonte de portfolio en cours de développement.<br> La version final arrive dans quelques jours !!</h1>
-        <section>
-            <h2>A propos</h2>
-            <h3>Développeur Front - End</h3>
-            <div class="propos">
-                <p>Je m'appelle Baptiste, je suis actuellement étudiant en 2ème de BUT Métiers du Multimédia et de l'Internet à Haguenau. Passionné par le développement web, je me spécialise dans la création
-                    d'interfaces Front-End sur mesure. J'aime concevoir et transformer mes idées en interfaces.</p>
-                <i class="bi bi-person-vcard-fill"></i>
-            </div>
-        </section>
-        <section>
-            <h2>Mes compétences</h2>
-            <h3>Outils & langages</h3>
-            <div class="carousel">
-                <input type="radio" name="menu" id="rond-1" checked>
-                <input type="radio" name="menu" id="rond-2">
-                <input type="radio" name="menu" id="rond-3">
-                <input type="radio" name="menu" id="rond-4">
-                <input type="radio" name="menu" id="rond-5">
-                <input type="radio" name="menu" id="rond-6">
-                <input type="radio" name="menu" id="rond-7">
-                <input type="radio" name="menu" id="rond-8">
 
-                <div class="cartes">
-                    <label class="card" for="rond-1" id="image-1">
-                        <div>
-                            <i class="bi bi-filetype-html"></i>
-                            <h4>HTML 5</h4>
-                        </div>
-                        <p>Le HTML est le langage le plus important dans le developpement web, car il permet d'établir
-                            la structure d'un site.</p>
-                    </label>
-                    <label class="card" for="rond-2" id="image-2">
-                        <div>
-                            <i class="bi bi-filetype-css"></i>
-                            <h4>CSS 3</h4>
-                        </div>
-                        <p>Le CSS est un langage très important pour pouvoir définir toute l'apparence visuelle.</p>
-                    </label>
-                    <label class="card" for="rond-3" id="image-3">
-                        <div>
-                            <i class="bi bi-filetype-php"></i>
-                            <h4>PHP 8</h4>
-                        </div>
-                        <p>Le PHP est un langage utile pour réaliser des pages web dynamiques.</p>
-                    </label>
-                    <label class="card" for="rond-4" id="image-4">
-                        <div>
-                            <i class="bi bi-braces"></i>
-                            <h4>Twig 3</h4>
-                        </div>
-                        <p>Twig est un moteur de template utile car il permet de simplifier le code HTML de manière
-                            simple.</p>
-                    </label>
-                    <label class="card" for="rond-5" id="image-5">
-                        <div>
-                            <i class="bi bi-file-earmark-word"></i>
-                            <h4>Wordpress 6</h4>
-                        </div>
-                        <p>Twig est un moteur de template utile car il permet de simplifier le code HTML de manière
-                            simple.</p>
-                    </label>
-                    <label class="card" for="rond-6" id="image-6">
-                        <div>
-                            <i class="bi bi-filetype-sql"></i>
-                            <h4>SQL</h4>
-                        </div>
-                        <p>Le SQL est un langage qui permet de communiquer avec les bases de données.</p>
-                        <p class="rouge">Quelques bases</p>
-                    </label>
-                    <label class="card" for="rond-7" id="image-7">
-                        <div>
-                            <i class="bi bi-filetype-js"></i>
-                            <h4>JavaScript</h4>
-                        </div>
-                        <p>Le JavaScript permet d'animer des pages web et d'améliorer l'expérience utilisateur.</p>
-                        <p class="rouge">Quelques bases</p>
-                    </label>
-                    <label class="card" for="rond-8" id="image-8">
-                        <div>
-                            <i class="bi bi-filetype-py"></i>
-                            <h4>Python 3</h4>
-                        </div>
-                        <p>Le python est un langage polyvalent, car il permet de créer un grand nombre d'algorithmes.
-                        </p>
-                        <p class="rouge">Quelques bases</p>
-                    </label>
-                </div>
+    <header>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero__flou">
+                <h1 class="hero__flou__title">Portfolio</h1>
+                <article class="hero__flou__article">
+                    <h2>Bienvenue sur mon portfolio.</h2>
+                    <p class="hero__flou__article__text">Découvrez mon univers, mon parcours, les compétences que
+                        j'améliore en continu et une sélection de mes projets en développement informatique.</p>
+                    <a href="#presentation">En savoir plus</a>
+                </article>
+            </div>
+            <div class="hero__net">
+                <h1 class="hero__net__title">développeur</h1>
             </div>
         </section>
-        <section>
-            <h2>Mes projets</h2>
-            <h3>Portfolio & Expérimentations</h3>
-            <div class="projet">
-                <article class="art-1">
-                    <h3>Formule 1</h3>
+        <section id="presentation" class="presentation">
+            <h3>Qui suis-je ?</h3>
+            <span class="span__title"></span>
+            <span class="span__title"></span>
+            <section>
+                <div class="card">
+                    <h3>A propos</h3>
+                    <div class="Propos__card">
+                        
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Hobbies</h3>
+                    <div class="hobby__card">
+                        <h3>Handball</h3>
+                        <p>Je fais du Handball en compétition.</p>
+                    </div>
+                    <div class="hobby__card">
+                        <h3>Randonnée & Trek</h3>
+                        <p>Je pars souvent en montagne faire de la randonnée ou des treks.</p>
+                    </div>
+                    <div class="hobby__card">
+                        <h3>Dev & Game Dev</h3>
+                        <p>J'aime le développement en général. J'essaye de faire du game dev, sur godot et unity.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>temporaire</h3>
+                </div>
+            </section>
+        </section>
+        <section class="competences">
+            <h3>Langages & Outils</h3>
+            <span class="span__title"></span>
+            <span class="span__title"></span>
+            <div class="zone__affichage">
+                <div id="img__skill" class="competences__img">
+                    <span>
+                        <h1>Front - End</h1>
+                    </span>
+                    <span>
+                        <h2>HTML</h2>
+                    </span>
+                    <span>
+                        <p>Compétence maîtrisée</p>
+                    </span>
+                </div>
+                <div class="competences__desc">
+                    <h2>Description : </h2>
+                    <p id="desc__skill">C'est le tout premier langage que j'ai découvert et appris. Aujourd'hui, je
+                        l'utilise au quotidien pour construire et structurer la base de tous mes projets — que ce soit
+                        pour mon portfolio, des plateformes en PHP, comme mon site sur les Vosges, ou divers projets
+                        d'intégration.<br><br>Je l'emploie de manière logiques pour construire une architecture
+                        propre,
+                        compréhensible et sémantique, avant de les habiller
+                        avec le CSS et le dynamisme du JavaScript.</p>
+                </div>
+            </div>
+            <div class="zone__miniature">
+                <div id="carousel" class="carousel">
+                    <div class="miniature__active" titre="HTML" cat="Front - End" tal="Compétence maîtrisée" desc="C'est le tout premier langage que j'ai découvert et appris. Aujourd'hui, je
+                        l'utilise au quotidien pour construire et structurer la base de tous mes projets — que ce soit
+                        pour mon portfolio, des plateformes en PHP, comme mon site sur les Vosges, ou divers projets
+                        d'intégration.<br><br>Je l'emploie de manière logiques pour construire une architecture propre,
+                        compréhensible et sémantique, avant de les habiller
+                        avec le CSS et le dynamisme du JavaScript." img="/images/HTML.jpg">
+                        <section>
+                            <h5>HTML</h5>
+                            <p>Compétence maîtrisée</p>
+                        </section>
+                        <img src="/images/logoLangage/1.png" alt="logo html">
+                    </div>
+                    <div class="miniature" titre="CSS" cat="Front - End" tal="Compétence maîtrisée" desc="C'est avec ce langage que j'ai commencé à améliorer et donner vie à mes interfaces. 
+                        Aujourd'hui, je l'utilise au quotidien pour styliser mes projets — qu'il s'agisse de 
+                        peaufiner mon portfolio, d'habiller des plateformes en PHP, 
+                        ou de mettre en place des interfaces responsives.<br><br>Je l'emploie de manière logique pour 
+                        structurer des feuilles de style propres et compréhensibles, avant d'animer le tout avec la 
+                        logique du JavaScript." img="/images/CSS.jpg">
+                        <section>
+                            <h5>CSS</h5>
+                            <p>Compétence maîtrisée</p>
+                        </section>
+                        <img src="/images/logoLangage/2.png" alt="logo CSS">
+                    </div>
+                    <div class="miniature" titre="PHP" cat="Back - End" tal="Compétence maîtrisée" desc="C'est avec lui que j'ai commencé à donner une vraie logique dynamique à mes 
+                        applications web. Aujourd'hui, je l'utilise au quotidien pour concevoir le back-end de 
+                        mes projets — qu'il s'agisse de gérer des bases de données, d'alimenter des plateformes 
+                        comme mon site sur RedBull.<br><br>Je l'emploie 
+                        de manière rigoureuse pour écrire, et créer des fichiers de manière propre et sécurisé, 
+                        assurant le lien parfait entre les données et l'interface utilisateur." img="/images/PHP.jpg">
+                        <section>
+                            <h5>PHP</h5>
+                            <p>Compétence maîtrisée</p>
+                        </section>
+                        <img src="/images/logoLangage/3.png" alt="logo PHP">
+                    </div>
+                    <div class="miniature" titre="Twig" cat="Front - End" tal="Compétence maîtrisée"
+                        desc="C'est le moteur de template que j'ai adopté pour structurer proprement mes vues et 
+                        séparer la logique PHP de mes affichages. Aujourd'hui, je l'utilise au quotidien pour dynamiser et simplifier
+                        mes projets — qu'il s'agisse de concevoir ou d'optimiser des plateformes en PHP , ou de réutiliser des composants modulaires.<br><br>Il est très utile car il permet de créer des boucles d'affichages, ce qui permet d'avoir des fichiers moins gros."
+                        img="/images/Twig.jpg">
+                        <section>
+                            <h5>Twig</h5>
+                            <p>Compétence maîtrisée</p>
+                        </section>
+                        <img src="/images/logoLangage/4.png" alt="logo Twig">
+                    </div>
+                    <div class="miniature" titre="SQL" cat="Back - End" tal="Compétence maîtrisée" desc="C'est l'outil que j'ai adopté pour gérer et stocker des données dans une base de données.
+                        Aujourd'hui, je l'utilise régulièrement pour mes différents projets web — qu'il s'agisse de stocker 
+                        les informations de mon portfolio, d'alimenter 
+                        des plateformes en PHP comme pour les avis sur le sites des Vosges.<br><br>J'accorde une attention particulière à l'écriture de requêtes 
+                        propres et optimisées pour garantir des performances fluides." img="/images/SQL.jpg">
+                        <section>
+                            <h5>SQL</h5>
+                            <p>Compétence maîtrisée</p>
+                        </section>
+                        <img src="/images/logoLangage/5.png" alt="logo SQL">
+                    </div>
+                    <div class="miniature" titre="JavaScript" cat="Front - End" tal="En apprentissage"
+                        desc="C'est le langage qui m'a permis d'améliorer l'interactivité et de donner de la vie 
+                        au cœur de mes projets web. Aujourd'hui, je l'utilise régulièrement, pour en découvrir tous les aspects — qu'il s'agisse de concevoir des composants interactifs pour mon 
+                        portfolio ou d'animer certains éléments.<br><br>Je ne maîtrise pas encore complètement ce langage, j'essaye qutidiennement de m'y interesser pour en apprendre plus."
+                        img="/images/JavaScript.jpg">
+                        <section>
+                            <h5>Javascript</h5>
+                            <p>En apprentissage</p>
+                        </section>
+                        <img src="/images/logoLangage/6.png" alt="logo JavaScript">
+                    </div>
+                    <div class="miniature" titre="C#" cat="Back - End" tal="En apprentissage" desc="C'est le langage qui m'ouvre les portes du développement de jeux vidéo et de 
+                        la logique objet. Je l'utilise principalement sur Godot et Unity pour concevoir mes 
+                        tout premiers scripts et expérimenter des mécaniques interactives.<br><br>Bien que j'en 
+                        sache encore très peu pour le moment, c'est un langage qui m'intéresse énormément 
+                        et que je prends plaisir à explorer pas à pas pour développer mes compétences."
+                        img="/images/C.jpg">
+                        <section>
+                            <h5>C#</h5>
+                            <p>En apprentissage</p>
+                        </section>
+                        <img src="/images/logoLangage/7.png" alt="logo C#">
+                    </div>
+                    <div class="miniature" titre="Python" cat="Back - End" tal="En apprentissage" desc="C'est le langage avec lequel j'ai pu découvrir les bases de la programmation 
+                    et la manipulation d'algorithmes. Bien que cela fasse un moment que je n'en ai pas fait, 
+                    c'est un langage qui m'intéresse toujours et que j'aimerais vraiment reprendre 
+                    en main.<br><br>Je souhaite m'y replonger prochainement pour explorer de nouvelles 
+                    logiques, automatiser des tâches ou traiter des données, et ainsi l'intégrer dans mes 
+                    futurs projets." img="/images/Python.jpg">
+                        <section>
+                            <h5>Python</h5>
+                            <p>En apprentissage</p>
+                        </section>
+                        <img src="/images/logoLangage/8.png" alt="logo Python">
+                    </div>
+                    <div class="miniature" titre="CMS" cat="Front - End" tal="En apprentissage" desc="C'est une technologie avec laquelle j'ai pu découvrir le fonctionnement 
+                        et la gestion de contenus sur le web. N'ayant pas encore une maîtrise totale 
+                        des CMS, c'est un domaine où j'ai encore beaucoup à apprendre, même si ce n'est 
+                        pas mon orientation préférée.<br><br>Je privilégie avant tout le développement 
+                        sur-mesure pour garder un contrôle total sur le code et l'architecture, mais j'en 
+                        explore les fonctionnalités pour comprendre leurs usages et répondre à des besoins 
+                        spécifiques." img="/images/CMS.jpg">
+                        <section>
+                            <h5>CMS</h5>
+                            <p>En apprentissage</p>
+                        </section>
+                        <img src="/images/logoLangage/9.png" alt="logo CMS">
+                    </div>
+                </div>
+                <div id="carousel" class="carousel">
+                    <div class="miniature__active" titre="HTML" cat="Front - End" tal="Compétence maîtrisée" desc="C'est le tout premier langage que j'ai découvert et appris. Aujourd'hui, je
+                        l'utilise au quotidien pour construire et structurer la base de tous mes projets — que ce soit
+                        pour mon portfolio, des plateformes en PHP, comme mon site sur les Vosges, ou divers projets
+                        d'intégration.<br><br>Je l'emploie de manière logiques pour construire une architecture propre,
+                        compréhensible et sémantique, avant de les habiller
+                        avec le CSS et le dynamisme du JavaScript." img="/images/HTML.jpg">
+                        <section>
+                            <h5>HTML</h5>
+                            <p>Compétence maîtrisée</p>
+                        </section>
+                        <img src="/images/logoLangage/1.png" alt="logo html">
+                    </div>
+                    <div class="miniature" titre="CSS" cat="Front - End" tal="Compétence maîtrisée" desc="C'est avec ce langage que j'ai commencé à améliorer et donner vie à mes interfaces. 
+                        Aujourd'hui, je l'utilise au quotidien pour styliser mes projets — qu'il s'agisse de 
+                        peaufiner mon portfolio, d'habiller des plateformes en PHP, 
+                        ou de mettre en place des interfaces responsives.<br><br>Je l'emploie de manière logique pour 
+                        structurer des feuilles de style propres et compréhensibles, avant d'animer le tout avec la 
+                        logique du JavaScript." img="/images/CSS.jpg">
+                        <section>
+                            <h5>CSS</h5>
+                            <p>Compétence maîtrisée</p>
+                        </section>
+                        <img src="/images/logoLangage/2.png" alt="logo CSS">
+                    </div>
+                    <div class="miniature" titre="PHP" cat="Back - End" tal="Compétence maîtrisée" desc="C'est avec lui que j'ai commencé à donner une vraie logique dynamique à mes 
+                        applications web. Aujourd'hui, je l'utilise au quotidien pour concevoir le back-end de 
+                        mes projets — qu'il s'agisse de gérer des bases de données, d'alimenter des plateformes 
+                        comme mon site sur RedBull.<br><br>Je l'emploie 
+                        de manière rigoureuse pour écrire, et créer des fichiers de manière propre et sécurisé, 
+                        assurant le lien parfait entre les données et l'interface utilisateur." img="/images/PHP.jpg">
+                        <section>
+                            <h5>PHP</h5>
+                            <p>Compétence maîtrisée</p>
+                        </section>
+                        <img src="/images/logoLangage/3.png" alt="logo PHP">
+                    </div>
+                    <div class="miniature" titre="Twig" cat="Front - End" tal="Compétence maîtrisée"
+                        desc="C'est le moteur de template que j'ai adopté pour structurer proprement mes vues et 
+                        séparer la logique PHP de mes affichages. Aujourd'hui, je l'utilise au quotidien pour dynamiser et simplifier
+                        mes projets — qu'il s'agisse de concevoir ou d'optimiser des plateformes en PHP , ou de réutiliser des composants modulaires.<br><br>Il est très utile car il permet de créer des boucles d'affichages, ce qui permet d'avoir des fichiers moins gros."
+                        img="/images/Twig.jpg">
+                        <section>
+                            <h5>Twig</h5>
+                            <p>Compétence maîtrisée</p>
+                        </section>
+                        <img src="/images/logoLangage/4.png" alt="logo Twig">
+                    </div>
+                    <div class="miniature" titre="SQL" cat="Back - End" tal="Compétence maîtrisée" desc="C'est l'outil que j'ai adopté pour gérer et stocker des données dans une base de données.
+                        Aujourd'hui, je l'utilise régulièrement pour mes différents projets web — qu'il s'agisse de stocker 
+                        les informations de mon portfolio, d'alimenter 
+                        des plateformes en PHP comme pour les avis sur le sites des Vosges.<br><br>J'accorde une attention particulière à l'écriture de requêtes 
+                        propres et optimisées pour garantir des performances fluides." img="/images/SQL.jpg">
+                        <section>
+                            <h5>SQL</h5>
+                            <p>Compétence maîtrisée</p>
+                        </section>
+                        <img src="/images/logoLangage/5.png" alt="logo SQL">
+                    </div>
+                    <div class="miniature" titre="JavaScript" cat="Front - End" tal="En apprentissage"
+                        desc="C'est le langage qui m'a permis d'améliorer l'interactivité et de donner de la vie 
+                        au cœur de mes projets web. Aujourd'hui, je l'utilise régulièrement, pour en découvrir tous les aspects — qu'il s'agisse de concevoir des composants interactifs pour mon 
+                        portfolio ou d'animer certains éléments.<br><br>Je ne maîtrise pas encore complètement ce langage, j'essaye qutidiennement de m'y interesser pour en apprendre plus."
+                        img="/images/JavaScript.jpg">
+                        <section>
+                            <h5>Javascript</h5>
+                            <p>En apprentissage</p>
+                        </section>
+                        <img src="/images/logoLangage/6.png" alt="logo JavaScript">
+                    </div>
+                    <div class="miniature" titre="C#" cat="Back - End" tal="En apprentissage" desc="C'est le langage qui m'ouvre les portes du développement de jeux vidéo et de 
+                        la logique objet. Je l'utilise principalement sur Godot et Unity pour concevoir mes 
+                        tout premiers scripts et expérimenter des mécaniques interactives.<br><br>Bien que j'en 
+                        sache encore très peu pour le moment, c'est un langage qui m'intéresse énormément 
+                        et que je prends plaisir à explorer pas à pas pour développer mes compétences."
+                        img="/images/C.jpg">
+                        <section>
+                            <h5>C#</h5>
+                            <p>En apprentissage</p>
+                        </section>
+                        <img src="/images/logoLangage/7.png" alt="logo C#">
+                    </div>
+                    <div class="miniature" titre="Python" cat="Back - End" tal="En apprentissage" desc="C'est le langage avec lequel j'ai pu découvrir les bases de la programmation 
+                    et la manipulation d'algorithmes. Bien que cela fasse un moment que je n'en ai pas fait, 
+                    c'est un langage qui m'intéresse toujours et que j'aimerais vraiment reprendre 
+                    en main.<br><br>Je souhaite m'y replonger prochainement pour explorer de nouvelles 
+                    logiques, automatiser des tâches ou traiter des données, et ainsi l'intégrer dans mes 
+                    futurs projets." img="/images/Python.jpg">
+                        <section>
+                            <h5>Python</h5>
+                            <p>En apprentissage</p>
+                        </section>
+                        <img src="/images/logoLangage/8.png" alt="logo Python">
+                    </div>
+                    <div class="miniature" titre="CMS" cat="Front - End" tal="En apprentissage" desc="C'est une technologie avec laquelle j'ai pu découvrir le fonctionnement 
+                        et la gestion de contenus sur le web. N'ayant pas encore une maîtrise totale 
+                        des CMS, c'est un domaine où j'ai encore beaucoup à apprendre, même si ce n'est 
+                        pas mon orientation préférée.<br><br>Je privilégie avant tout le développement 
+                        sur-mesure pour garder un contrôle total sur le code et l'architecture, mais j'en 
+                        explore les fonctionnalités pour comprendre leurs usages et répondre à des besoins 
+                        spécifiques." img="/images/CMS.jpg">
+                        <section>
+                            <h5>CMS</h5>
+                            <p>En apprentissage</p>
+                        </section>
+                        <img src="/images/logoLangage/9.png" alt="logo CMS">
+                    </div>
+                </div>
+        </section>
+
+        <section class="projet">
+            <h3>Projets & Expérimentations</h3>
+            <span class="span__title"></span>
+            <span class="span__title"></span>
+            <div class="projet__list">
+                <article class="prj1">
+                    <h4>Projet d'un jeu clicker.</h4>
+                    <p>Dans ce projet, j'ai réalisé un jeu clicker sur le navigateur. Ce projet m'a particulièrement
+                        permis d'apprendre le fonctionnement du JavaScript.</p>
+                    <a href="/Projet/Clicker_Projet/index.html" target="_blank">En savoir plus</a>
                 </article>
-                <div class="div-1">
-                    <p>Ce projet est un projet scolaire, mais c'est également mon 1er vrai projet de site web. <br>
-                        <br>J'avais donc un cahier des charges précis, comme réaliser un certain nombre de pages ou
-                        faire
-                        certaine animation.<br><br> Vous pouvez avoir accès à ce projet en téléchargant <a
-                            href="projet1/WEB1.zip"><span>ce fichier ZIP</span></a>.</span>
+                <article class="prj2">
+                    <h4>Un site sur les Vosges.</h4>
+                    <p>Ce projet était un projet scolaire. Il m'a permis de savoir travailler avec une base de données,
+                        mais également de tester le responsive design.
                     </p>
-                </div>
-                <article class="art-2">
-                    <h3>Red Bull</h3>
+                    <a href="http://portfolio-baptiste.page.gd/temp_SAE_V1/" target="_blank">En savoir plus</a>
                 </article>
-                <div class="div-2">
-                    <p>Mon deuxième projet est également un projet scolaire, avec cahier des charges à
-                        respecter. <br><br>Cette fois ci, ce projet, m'a permis d'en apprendre plus sur le langage PHP,
-                        mais également d'apprendre à utiliser le moteur de template TWIG.<br><br>Vous pouvez avoir accès à ce projet en téléchargant <a
-                            href="projet1/SAE.zip"><span>ce fichier ZIP</span></a></p>
-                </div>
-                <article class="art-3">
-                    <h3>Portfolio</h3>
+                <article class="prj3">
+                    <h4>Un site sur RedBull.</h4>
+                    <p>Ce projet était également scolaire. Il m'a permis d'apprendre le PHP et Twig et pour apprendre la
+                        gestion de changement de langue. </p>
+                    <a href="http://portfolio-baptiste.page.gd/RedBull_Projet/" target="_blank">En savoir plus</a>
                 </article>
-                <div class="div-3">
-                    <p>Mon dernier projet en date est mon portfolio.<br><br>
-                    Coder ce projet m'a était très utile car j'ai appris comment coder de manière responsive. Je l'ai codé en "Mobile First", j'ai donc favorisé l'usage pour téléphone, cependant je travail pour mieux optimiser l'espace sur de plus grand écran.<br><br>Vous pouvez avoir accès à ce projet en téléchargant <a
-                            href="projet1/portfolio.zip"><span>ce fichier ZIP</span></a></p>
-                </div>
+                <article class="prj4">
+                    <h4>Un projet d'apprentissage.</h4>
+                    <p>Ce projet était très rapide. Il m'a uniquement servi à améliorer ma gestion du responsive design.
+                    </p>
+                    <a href="/Projet/ResponsiveTD_Projet/Jung_Baptiste.html" target="_blank">En savoir plus</a>
+                </article>
+                <article class="prj5">
+                    <h4>Un Site de F1.</h4>
+                    <p>Ce projet était le premier. Il m'a permis de revoir les bases du code, et de consolider ma
+                        maîtrise du HTML et du CSS.
+                    </p>
+                    <a href="/Projet/F1_Projet/index.html" target="_blank">En savoir plus</a>
+                </article>
+                <article class="prj6">
+                    <h4>Autres petits projets.</h4>
+                    <p>Voici une liste des autres petits projets test que j'ai réalisés, avec un but purement
+                        d'apprentissage de nouvelles choses.</p>
+                    <a href="#">En savoir plus</a>
+                </article>
             </div>
         </section>
     </main>
+
     <footer>
-        <ul>
-            <li><i class="bi bi-envelope-fill"></i> baptiste.jung.2007@gmail.com</li>
-            <li><i class="bi bi-telephone-fill"></i> 07.49.88.39.69</li>
-        </ul>
     </footer>
+
+    <script src="script.js" defer></script>
 </body>
 
 </html>

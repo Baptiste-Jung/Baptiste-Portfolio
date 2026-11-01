@@ -1,0 +1,41 @@
+{% extends "base.twig" %}
+
+{% block main %}
+<h2>{{ tableau_detail.nom }}</h2>
+
+<article class="detail">
+    <h2 class="invi">temp</h2>
+
+    <section class="photo_stat">
+        <h2 class="invi">temp</h2>
+        <img src="{{tableau_detail.image}}" alt="image de l'itinéraire du sentiers {{tableau_detail.nom }}">
+        <div class="stat">
+            <div class="temps">
+                <i class="bi bi-stopwatch"></i>
+                <p>{{ tableau_detail.temps }}</p>
+            </div>
+            <div class="km">
+                <i class="bi bi-geo-alt-fill"></i>
+                <p>{{ tableau_detail.km }} km</p>
+            </div>
+            <div class="denivle">
+                <i class="bi bi-graph-up-arrow"></i>
+                <p>{{ tableau_detail.denivele }} m</p>
+            </div>
+        </div>
+    </section>
+    <section class="cat">
+        <img src="{{ tableau_detail.icon_categories }}" alt="{{ tableau_detail.nom_categorie }}">
+        <h3>{{tableau_detail.nom_categorie}}</h3>
+    </section>
+    <p class="text">{{ tableau_detail.description}}</p>
+    <section class="cat">
+        <img src="{{ tableau_detail.icon_difficulte }}" alt="{{ tableau_detail.nom_difficulte }}">
+        <h3>{{tableau_detail.nom_difficulte}}</h3>
+    </section>
+    <p class="text">{{ tableau_detail.materiel}}</p>
+    <h3>Points de vu.</h3>
+    <p class="text">{{tableau_detail.PointVU}}</p>
+</article>
+
+{% endblock %}

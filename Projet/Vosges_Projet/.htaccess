@@ -1,0 +1,3 @@
+Options  -Indexes
+ErrorDocument 403 /TEMP_SAE_V1/403.php
+ErrorDocument 404 /TEMP_SAE_V1/404.php

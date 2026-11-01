@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(127, 0, 255, 0.3)), url(image/fond.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(251, 252, 250);
+
+    /*c'est ligne c'est gemini et ca permet d'empecher l'apparition du I-beam et des carré bleu au clique*/
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+header {
+    backdrop-filter: blur(10px);
+    border-bottom: 3px solid #efb810;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 30px 0px;
+}
+
+header section {
+    width: 57%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+    padding: 7px 17px;
+    background-color: #efb810;
+    border-radius: 30px;
+}
+
+h1 {
+    color: #efb810;
+    font-family: "Garamond", "Georgia", serif;
+    font-style: italic;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+main article {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main article h2 {
+    background-image: url(image/bois.jpg);
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px black;
+    background-size: 100% 100%;
+    padding: 3%;
+    font-family: "Garamond", "Georgia", serif;
+    font-style: italic;
+    font-size: 20px;
+    position: relative;
+    z-index: 10;
+    top: 20px;
+    text-align: center;
+}
+
+main .shop {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 3px solid #efb810;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 40vh;
+    padding: 50px 0px;
+}
+
+main .shop button {
+    width: 70%;
+    padding: 10px 5px;
+    border-radius: 10px;
+    font-family: "Garamond", "Georgia", serif;
+    font-style: italic;
+    transition: all 0.1s;
+}
+
+main .shop button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+
+}
+
+main .stat {
+    display: flex;
+    justify-content: space-between;
+    border: 3px solid #efb810;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 40vh;
+    padding: 50px 0px;
+}
+
+main .stat div {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 5px;
+}
+
+main .stat h3 {
+    font-family: "Garamond", "Georgia", serif;
+    font-style: italic;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+main .stat span {
+    font-size: 25px;
+}
+
+main img {
+    width: 30%;
+    margin-top: 100px;
+    transition: all 0.1s;
+}
+
+main img:hover {
+    cursor: pointer;
+    ;
+}
+
+main section {
+    display: flex;
+    flex-direction: column;
+}
+
+.max {
+    pointer-events: none;
+    background-color: #efb810 !important;
+    opacity: 0.6 !important;
+    color: rgb(251, 252, 250) !important;
+}
+
+.erreur {
+    opacity: 0.6;
+    filter: grayscale(1);
+    pointer-events: none;
+}
+
+.potion-jump {
+    position: fixed;
+    bottom: -50px;
+    z-index: 99;
+    animation: monter 2s linear forwards;
+    width: 100px;
+    pointer-events: none;
+}
+
+@keyframes monter {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-50vh) rotate(360deg);
+        opacity: 0;
+    }
+}

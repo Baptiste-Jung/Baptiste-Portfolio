@@ -1,0 +1,332 @@
+/* GENERAL */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* HEADER */
+
+header {
+    background-color: #002D72;
+    color: white;
+    padding: 15px 20px;
+    width: 1200px;
+    position: sticky;
+    top: 0px;
+}
+
+header .headerimg {
+    display: flex;
+    flex-direction: row;
+    gap: 800px;
+}
+
+/*Navigation*/
+
+header a {
+    color: white;
+    font-size: 20px;
+    transition: all 0.1s;
+}
+
+header nav {
+    display: flex;
+    gap: 50px;
+}
+
+header .logo {
+    width: 100px;
+    margin: 5px 0px 25px 5px;
+    transition: all 0.1s;
+}
+
+header .en {
+    width: 50px;
+    height: 50px;
+    transition: all 0.1s;
+}
+
+header .drapeau {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+}
+
+/*Sous menu*/
+
+header nav ul a {
+    font-size: 15px;
+}
+
+header nav .sousMenu ul {
+    display: none;
+    position: absolute;
+    transition: all 0.1s;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+header nav .sousMenu li {
+    margin-top: 10px;
+}
+
+header nav .sousMenu ul a {
+    color: white;
+}
+
+/*Animation*/
+
+header nav a:hover {
+    color: #FFD700;
+}
+
+header .logo:hover {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+header .en:hover {
+    transform: scale(1.2);
+}
+
+header nav .sousMenu:hover ul {
+    display: block;
+}
+
+
+/* MAIN */
+
+main {
+    width: 1200px;
+    margin-bottom: 50px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+:target {
+    scroll-margin-top: 170px;
+}
+
+main .ban {
+    width: 1200px;
+}
+
+main .acceuil {
+    background-color: #F2F2F2;
+    padding: 50px;
+    margin-bottom: 30px;
+    border-end-start-radius: 30px;
+    border-end-end-radius: 30px;
+}
+
+main .acceuil-contenu {
+    border-radius: 30px;
+    background-color: #F2F2F2;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-bottom: 30px;
+    transition: all 0.1s;
+}
+
+main .contenu-site {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    text-align: center;
+    padding-bottom: 50px;
+    transition: all 0.1s;
+
+}
+
+main .contenu-site section {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    transition: all 0.1s;
+}
+
+
+main .contenu-site img {
+    width: 200px;
+    border-radius: 20px;
+    filter: blur(2.5px);
+    transition: all 0.1s;
+}
+
+
+main a {
+    color: black;
+    transition: all 0.1s;
+}
+
+main h2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    padding-top: 60px;
+}
+
+main h3 {
+    text-decoration: underline
+}
+
+main h4 {
+    padding: 10px 0px 5px 0px;
+}
+
+main p {
+    margin-top: 10px;
+    color: black;
+    font-size: 20px;
+}
+
+main img {
+    width: 105px;
+}
+
+main span {
+    font-weight: bold;
+}
+
+/*Pour la page boisson*/
+
+main .boiss {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+
+main article {
+    flex: 0 0 calc(50% - 20px);
+    margin-bottom: 30px;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    gap: 100px;
+    transition: all 0.1s;
+}
+
+/*Pour le formulaire*/
+
+main form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px;
+    background-color: #F2F2F2;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.1s;
+    margin-bottom: 50px;
+}
+
+main form fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+main form button {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #002D72;
+    color: white;
+    font-size: 20px;
+    transition: all 0.1s;
+}
+
+main form select {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+main form input {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/*Animation*/
+
+main form:hover {
+    box-shadow: 0 0 20px #E10600;
+}
+
+main form button:hover {
+    color: #FFD700;
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+main article:hover .red {
+    color: #E10600;
+}
+
+main article:hover {
+    box-shadow: 0 0 20px #E10600;
+}
+
+main aside:hover a {
+    color: #E10600;
+}
+
+main .acceuil-contenu:hover {
+    box-shadow: 0 0 20px #E10600;
+}
+
+main .contenu-site section:hover {
+    transform: scale(1.1);
+}
+
+main .contenu-site section:hover img {
+    filter: blur(0);
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #002D72;
+    color: white;
+    padding: 20px;
+    width: 1200px;
+}
+
+footer p {
+    text-align: center;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px 0px 50px 0px;
+    color: #F2F2F2;
+}
+
+footer a {
+    color: white;
+}

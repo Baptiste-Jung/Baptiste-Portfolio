@@ -1,0 +1,25 @@
+{% extends "base.twig" %}
+
+{% block css %}
+<link rel="stylesheet" href="css/propos.css">
+{% endblock css %}
+
+{% block main %}
+<h2>{{ nom }}</h2>
+<div class="propos">
+    {% for para in paragraphe %}
+    <p><span class="red">{{ para.titre }}</span><br>
+        {{ para.texte }}
+    </p>
+    {% endfor %}
+</div>
+<details>
+    <summary>{{ bouton }}</summary>
+    <div class="cgu">
+        {% for text in cgu %}
+        <p><span class="red">{{ text.nom }}</span><br>
+            {{ text.texte }}</p>
+        {% endfor %}
+    </div>
+</details>
+{% endblock %}
