@@ -132,7 +132,7 @@ main .presentation .card {
     gap: 30px;
     width: 100%;
     background-color: var(--color3);
-    padding: 5%;
+    padding: 10px 20px;
     border: solid 3px var(--color2);
     border-radius: 20px;
 }
@@ -168,6 +168,15 @@ main .presentation .card div {
 }
 
 main .presentation .hobby__card h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 20px;
+    text-align: left;
+    font-family: monospace;
+    color: var(--color1);
+}
+
+main .presentation .outil__card h3 {
     font-size: 20px;
     font-weight: bold;
     margin-right: 20px;
